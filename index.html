@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komal-Portfolio</title>
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main1.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- font awosem -->
+     <script src="https://kit.fontawesome.com/ad19835537.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- header section -->
+    <section id="header">
+      <div class="overlay"></div>
+      <div class="container header">
+        <nav>
+          <!-- logo -->
+          <h2>komal<span>.</span></h2>
+          <!-- menu -->
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="heading-text" id="home">
+          <p>Web Developer</p>
+          <h1>
+            Hi, I'm <span> Komal Kalsoom</span> <br />
+            From Pakistan
+          </h1>
+        </div>
+      </div>
+    </section>
+    <!-- about section -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/laptop4.jpg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I'm Komal Kalsoom, a passionate and creative Web Developer based
+              in Lahore, Pakistan. I hold a Bachelor's degree in Computer
+              Science (BSCS) and have completed several certifications in modern
+              web technologies. I specialize in building responsive,
+              user-friendly websites and applications using HTML, CSS,
+              JavaScript, and modern frameworks. With a keen eye for design and
+              a love for clean code, I'm dedicated to creating digital
+              experiences that are both visually stunning and highly functional.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="openTab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="openTab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="openTab('education')">Education</p>
+            </div>
+            <!-- Skills Tab -->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Frontend Development</span><br />HTML, CSS, JavaScript,
+                  React
+                </li>
+                <li>
+                  <span>Responsive Design</span><br />Cross-device compatibility
+                </li>
+              </ul>
+            </div>
+            <!-- Experience Tab -->
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2025 - Present</span><br />
+                  Web Developer at Rhombix
+                </li>
+                <li>
+                  <span>2025 </span><br />Intern Frontend Developer at Rhombix
+                </li>
+                <li><span>2022 - 2023</span><br />Built personal projects</li>
+              </ul>
+            </div>
+            <!-- Education Tab -->
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>BSCS</span><br />Bachelor of Science in Computer Science
+                  - Faisalabad, Pakistan
+                </li>
+                <li>
+                  <span>Web Development Certifications</span><br />HTML, CSS,
+                  JavaScript, Responsive Design
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- services section start -->
+    <section id="services">
+      <div class="container">
+        <div class="sub-title">Services</div>
+        <div class="services-list">
+          <div class="service-card" data-service="1">
+            <h2>Responsive Web Design</h2>
+            <p>We build websites that look great on all devices.</p>
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+          <div class="service-card" data-service="2">
+            <h2>Frontend Development</h2>
+            <p>Creating interactive UI using HTML, CSS, JavaScript.</p>
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+          <div class="service-card" data-service="3">
+            <h2>Backend Development</h2>
+            <p>Robust servers and databases to power your app.</p>
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+          <div class="service-card" data-service="4">
+            <h2>Full-Stack Solutions</h2>
+            <p>Complete frontend + backend solutions for projects.</p>
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+          <div class="service-card" data-service="5">
+            <h2>API Integration</h2>
+            <p>Connect your website with third-party services.</p>
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+          <div class="service-card" data-service="6">
+            <h2>Performance Optimization</h2>
+            <p>Boost loading speed and SEO with optimization.</p>
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- services Modal -->
+    <div class="modal" id="service-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="modal-img" src="" alt="Service Image" />
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+    <!-- services section end -->
+    <!-- portfolio section start -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="sub-title">Portfolio</div>
+        <div class="portfolio-list">
+          <div class="portfolio-card" data-portfolio="1">
+            <img src="images/laptop2.jpg" alt="Project 1" />
+            <h2>Project One</h2>
+            <p>Responsive website with modern layout and animations.</p>
+            <a href="#" class="view-details">View Details</a>
+          </div>
+          <div class="portfolio-card" data-portfolio="2">
+            <img src="images/laptop3.jpg" alt="Project 2" />
+            <h2>Project Two</h2>
+            <p>React + Node.js based e-commerce platform.</p>
+            <a href="#" class="view-details">View Details</a>
+          </div>
+          <div class="portfolio-card" data-portfolio="3">
+            <img src="images/laptop4.jpg" alt="Project 3" />
+            <h2>Project Three</h2>
+            <p>Mobile app design and development in Flutter.</p>
+            <a href="#" class="view-details">View Details</a>
+          </div>
+          <div class="portfolio-card" data-portfolio="3">
+            <img src="images/laptop4.jpg" alt="Project 3" />
+            <h2>Project Three</h2>
+            <p>Mobile app design and development in Flutter.</p>
+            <a href="#" class="view-details">View Details</a>
+          </div>
+          <div class="portfolio-card" data-portfolio="3">
+            <img src="images/laptop4.jpg" alt="Project 3" />
+            <h2>Project Three</h2>
+            <p>Mobile app design and development in Flutter.</p>
+            <a href="#" class="view-details">View Details</a>
+          </div>
+          <div class="portfolio-card" data-portfolio="3">
+            <img src="images/laptop4.jpg" alt="Project 3" />
+            <h2>Project Three</h2>
+            <p>Mobile app design and development in Flutter.</p>
+            <a href="#" class="view-details">View Details</a>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- portfolio modal -->
+    <div class="modal" id="portfolio-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="portfolio-modal-img" src="" alt="Project Image" />
+        <h2 id="portfolio-modal-title"></h2>
+        <p id="portfolio-modal-description"></p>
+        <a id="portfolio-modal-live" href="#" target="_blank" class="btn-live"
+          >View Live</a
+        >
+      </div>
+    </div>
+    <!-- portfolio section end -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h2>Komal <span>Kalsoom</span></h2>
+          <p>
+            Web Developer based in Lahore, Pakistan. Passionate about creating
+            responsive and user-friendly websites.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>Email: komal@example.com</p>
+          <p>Phone: +92 123 4567890</p>
+          <div class="footer-socials">
+            <a
+              href="https://www.linkedin.com/in/komal-kalsoom1/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/komal-0527" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 All rights reserved. Made by Komal Kalsoom with ❤️</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/portfolio.js"></script>
+  </body>
+</html>

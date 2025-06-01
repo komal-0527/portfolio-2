@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+/* ===============================
+   Base Styles - Reset and Fonts
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #080808;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Container
+================================ */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 85vh;
+}
+
+/* ===============================
+   Header Section
+================================ */
+#header {
+  position: relative;
+  height: 100vh;
+  background: url("../images/bg-img.jpg") center/cover no-repeat;
+}
+
+#header .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(8, 8, 8, 0.7);
+  z-index: 1;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+nav h2 {
+  font-size: 35px;
+  color: #fff;
+}
+
+nav h2 span {
+  color: var(--main-color); 
+  font-size: 45px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--main-color);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 50%;
+}
+
+/* Header Heading Text */
+.heading-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: 30px;
+}
+
+.heading-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.heading-text h1 span {
+  color: var(--main-color);
+}
+
+/* ===============================
+   About Section
+================================ */
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-col-1{
+  flex-basis: 40%;
+}
+
+.about-col-2 {
+  flex-basis: 50%;
+}
+
+.about-col-1 img {
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 8px;
+  
+}
+
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Tabs */
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.tab-links {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background: var(--main-color);
+  transition: width 0.3s ease;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul {
+  list-style: none;
+}
+
+.tab-contents ul li {
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: var(--main-color);
+  font-size: 14px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* ===============================
+   Services Section
+================================ */
+#services {
+  padding: 60px 0;
+  background-color: transparent;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #1c1c1c;
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.service-card h2 {
+  color: var(--main-color);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #dddddd;
+  margin-bottom: 15px;
+}
+
+.service-card a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.service-card a:hover {
+  color: #ffffff;
+}
+
+/* ===============================
+   Modal Styles
+================================ */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   Portfolio Section
+================================ */
+.portfolio-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns default */
+  gap: 30px;
+}
+
+.portfolio-card {
+  background: #232323;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.portfolio-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+.portfolio-card p {
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.btn-live {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.portfolio-card a{
+  color: var(--main-color);
+}
+
+/* ============================ */
+/* footer css */
+.footer {
+  margin: 50px 0px;
+  background-color: #1f1e1e;
+  color: #ddd;
+  padding: 60px 10% 20px;
+  font-size: 15px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer h2,
+.footer h3 {
+  color: #fff;
+}
+
+.footer h2 span {
+  color: #00b894;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 300px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #00b894;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+}
+
+.footer-socials a {
+  margin-right: 12px;
+  color: #ddd;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #00b894;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
