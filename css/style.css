@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap");
 
-
 /* ===============================
    Base Styles - Reset and Fonts
 ================================ */
@@ -66,7 +65,7 @@ nav h2 {
 }
 
 nav h2 span {
-  color: var(--main-color); 
+  color: var(--main-color);
   font-size: 45px;
 }
 
@@ -137,7 +136,7 @@ nav ul li a.active::after {
   gap: 20px;
 }
 
-.about-col-1{
+.about-col-1 {
   flex-basis: 40%;
 }
 
@@ -149,7 +148,6 @@ nav ul li a.active::after {
   width: 100%;
   opacity: 0.5;
   border-radius: 8px;
-  
 }
 
 .sub-title {
@@ -373,14 +371,83 @@ nav ul li a.active::after {
   border-radius: 6px;
   text-decoration: none;
 }
-.portfolio-card a{
+.portfolio-card a {
   color: var(--main-color);
 }
+
+/* =========================== */
+/* contact us */
+.contact-section {
+  padding: 80px 0;
+  background-color: #080808;
+  color: #fff;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--main-color);
+}
+
+.btn-submit {
+  padding: 12px 20px;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #00a17a;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  font-size: 20px;
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+  color: var(--main-color);
+  font-size: 35px;
+}
+
+
 
 /* ============================ */
 /* footer css */
 .footer {
-  margin: 50px 0px;
+  margin-top: 50px;
   background-color: #1f1e1e;
   color: #ddd;
   padding: 60px 10% 20px;
@@ -400,7 +467,7 @@ nav ul li a.active::after {
 }
 
 .footer h2 span {
-  color: #00b894;
+  color: var(--main-color);
 }
 
 .footer-about,
