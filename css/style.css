@@ -15,7 +15,9 @@ body {
   color: #ffffff;
   line-height: 1.6;
 }
-
+body.menu-open {
+  overflow: hidden;
+}
 /* ===============================
    Container
 ================================ */
@@ -42,21 +44,22 @@ body {
   z-index: 1;
 }
 
-.header {
+.container.header {
   position: relative;
   z-index: 2;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 nav {
-  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 10px;
+  position: relative;
 }
 
 nav h2 {
@@ -69,13 +72,11 @@ nav h2 span {
   font-size: 45px;
 }
 
+/* Nav links (desktop) */
 nav ul {
   display: flex;
   list-style: none;
-}
-
-nav ul li {
-  margin: 0 15px;
+  gap: 20px;
 }
 
 nav ul li a {
@@ -102,6 +103,36 @@ nav ul li a.active::after {
   width: 50%;
 }
 
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Heading text */
+.heading-text {
+  color: #fff;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+.heading-text p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.heading-text h1 {
+  font-size: 40px;
+  line-height: 1.4;
+}
+
+.heading-text span {
+  color: var(--main-color);
+}
 /* Header Heading Text */
 .heading-text {
   flex: 1;

@@ -1,8 +1,52 @@
 /* ===============================
    Responsive Styles
 ================================ */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 60px; /* below navbar */
+    right: 10px;
+    background: var(--main-color);
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    display: none; /* hidden by default */
+    z-index: 999;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .menu-toggle i.fa-times {
+    color: #fff;
+  }
+}
 
 /* Large screens and below */
+
 @media (max-width: 1200px) {
   .container {
     padding: 10px 5%;
