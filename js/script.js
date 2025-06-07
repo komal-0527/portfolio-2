@@ -1,4 +1,3 @@
-
 function openTab(tabName) {
   const tabLinks = document.querySelectorAll(".tab-links");
   const tabContents = document.querySelectorAll(".tab-contents");
@@ -12,19 +11,31 @@ function openTab(tabName) {
 
 
 
-// mobile menu logic
- const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
+// navbar logic
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+const navLinkItems = navLinks.querySelectorAll("a");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+
+  const icon = menuToggle.querySelector("i");
+  if (navLinks.classList.contains("open")) {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-times");
+  } else {
+    icon.classList.remove("fa-times");
+    icon.classList.add("fa-bars");
+  }
+});
+
+navLinkItems.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+
     const icon = menuToggle.querySelector("i");
-
-    if (navLinks.classList.contains("active")) {
-      icon.classList.remove("fa-bars");
-      icon.classList.add("fa-times");
-    } else {
-      icon.classList.remove("fa-times");
-      icon.classList.add("fa-bars");
-    }
+    icon.classList.remove("fa-times");
+    icon.classList.add("fa-bars");
   });
+});
+
